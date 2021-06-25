@@ -1,0 +1,480 @@
+/* цвет основного текста  #212121  */
+/* вторичный цвет текста #757575  */
+/* белый текст #FFFFFF  */
+/* белый 60% прозрачность текст rgba(255, 255, 255, 0.6)  */
+/* акцент текста #2196F3  */
+
+/* background header: #FFFFFF; */
+/* background hero, footer: #2F303A; */
+/* background Наши приоритеты, Чем мы занимаемся: #E5E5E5; */
+/* background Наша команда: #F5F4FA; */
+
+/* 
+    font-family: 'Raleway', sans-serif;
+
+    font-family: 'Roboto', sans-serif; */
+
+:root {
+  --primary-text-color: #212121;
+  --accent-color: #2196f3;
+  --secondary-text-color: #757575;
+  --logo-color-header: #000;
+  --primary-color-footer: #fff;
+  --address-color-footer: rgba(255, 255, 255, 0.6);
+  --text-color-hero: #fff;
+
+  --bg-color-header: #fff;
+  --bg-color-card: #fff;
+  --bg-color-footer: #2f303a;
+  --bg-color-hero: #2f303a;
+  --bg-color-primary: #e5e5e5;
+  --bg-color-secondary: #f5f4fa;
+  --bg-color-button-hover: #188ce8;
+
+  --card-border-var: 1px solid #eeeeee;
+
+  --card-item-gap: 30px;
+
+  --box-shadow-var: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+
+  background-color: var(--bg-color-primary);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.hide {
+  display: none;
+}
+
+.ul-clear-list-style {
+  list-style: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+
+.page-header a,
+.page-footer a {
+  text-decoration: none;
+}
+
+.section-header,
+.section-footer,
+.section-hero,
+.section {
+  width: 1200px;
+  margin: 0px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* .card * {
+  outline: 1px solid rgb(225, 0, 255);
+} */
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: calc(var(--card-item-gap) * -1);
+  margin-top: calc(var(--card-item-gap) * -1);
+}
+
+.card-item {
+  margin-left: var(--card-item-gap);
+  margin-top: var(--card-item-gap);
+
+  background-color: var(--bg-color-card);
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  /* outline: 1px solid red; */
+}
+
+.priorities-section {
+  padding-bottom: 0px;
+}
+
+.section-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+/*==================  header ================ */
+
+.page-header {
+  background-color: var(--bg-color-header);
+  border-bottom: 1px solid #ececec;
+  /* position: fixed;
+  width: 100%; */
+}
+
+.section-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+}
+
+/*  logo  */
+.logo {
+  display: inline-block;
+  margin-right: 92px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.page-header .logo {
+  color: var(--logo-color-header);
+}
+.logo span {
+  color: var(--accent-color);
+}
+
+.page-footer .logo {
+  color: var(--primary-color-footer);
+
+  margin-bottom: 20px;
+}
+
+.logo:hover {
+  color: var(--accent-color);
+}
+
+.page-header .logo:hover span {
+  color: var(--logo-color-header);
+}
+
+.page-footer .logo:hover span {
+  color: var(--primary-color-footer);
+}
+
+/* site-nav */
+
+.site-nav,
+.page-header-address {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav :not(:last-child),
+.page-header-address :not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav-link:visited,
+.site-nav-link {
+  color: var(--primary-text-color);
+}
+
+.site-nav-link:hover,
+.site-nav-link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav-link.current {
+  color: var(--accent-color);
+}
+
+/* header address  */
+.page-header-address {
+  font-style: normal;
+
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.page-header-address a:visited,
+.page-header-address a {
+  color: var(--secondary-text-color);
+}
+
+.page-header-address a:hover,
+.page-header-address a:focus {
+  color: var(--accent-color);
+}
+
+/*================ END HEADER ====================*/
+
+/*======================== HERO ==================== */
+/* hero */
+
+.hero {
+  text-align: center;
+  background-color: var(--bg-color-hero);
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  margin-top: 0px;
+  margin-bottom: 30px;
+
+  color: var(--text-color-hero);
+}
+
+.hero button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  padding: 10px 32px;
+
+  color: var(--text-color-hero);
+  background-color: var(--accent-color);
+  border: 0px;
+  border-radius: 4px;
+}
+
+.hero button:hover,
+.hero button:focus {
+  background-color: var(--bg-color-button-hover);
+}
+
+/*===================== END HERO ====================*/
+
+/* все секции */
+
+/*====================== priorities =================  */
+.section-priorities,
+.section-occupation {
+  background-color: var(--bg-color-primary);
+}
+
+.priorities {
+  display: flex;
+  justify-content: space-between;
+}
+
+.priorities :nth-child(n) {
+  width: 270px;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  margin-top: 0px;
+  margin-bottom: 50px;
+}
+
+.priorities .title {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.priorities .text {
+  font-size: 14px;
+  line-height: 1.71;
+
+  color: var(--secondary-text-color);
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+/*============== END priorities ==================*/
+
+/*=============== occupation ============== */
+
+.occupation {
+}
+
+.occupation .item {
+  flex-basis: calc(100% / 3 - var(--card-item-gap));
+}
+
+/*=============== TEAM ============== */
+.section-team {
+  background-color: var(--bg-color-secondary);
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-item {
+  flex-basis: calc(100% / 4 - var(--card-item-gap));
+
+  box-shadow: var(--box-shadow-var);
+
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-item .card-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team .title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.team .text {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: 1.19;
+  text-align: center;
+  color: var(--secondary-text-color);
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* footer  */
+
+.page-footer {
+  color: var(--primary-color-footer);
+  background-color: var(--bg-color-footer);
+}
+
+.page-footer-address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.page-footer-address li:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.page-footer-address a,
+.page-footer-address a:visited {
+  color: var(--address-color-footer);
+}
+
+.page-footer-address a:hover,
+.page-footer-address a:focus {
+  color: var(--accent-color);
+}
+
+/* секция портфолио */
+
+.section-portfolio {
+  background-color: var(--bg-color-primary);
+}
+
+.section-portfolio-works .title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-align: left;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.section-portfolio-works .card-item {
+  flex-basis: calc(100% / 3 - var(--card-item-gap));
+}
+
+.section-portfolio-works .card-text {
+  /* background-color: crimson; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  border-left: var(--card-border-var);
+  border-right: var(--card-border-var);
+  border-bottom: var(--card-border-var);
+}
+
+.section-portfolio-works .text {
+  font-size: 16px;
+  line-height: 1.88;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  color: var(--secondary-text-color);
+}
+.section-portfolio-filters {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 50px;
+}
+
+.section-portfolio-filters :not(:last-child) {
+  margin-right: 8px;
+}
+
+.section-portfolio-filters button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  cursor: pointer;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+
+  border: 0px;
+  border-radius: 4px;
+
+  color: inherit;
+  background-color: var(--bg-color-secondary);
+}
+
+.section-portfolio-filters button:hover,
+.section-portfolio-filters button:focus {
+  color: var(--text-color-hero);
+  background-color: var(--accent-color);
+}
