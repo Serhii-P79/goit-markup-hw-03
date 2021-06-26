@@ -27,7 +27,7 @@
   --bg-color-card: #fff;
   --bg-color-footer: #2f303a;
   --bg-color-hero: #2f303a;
-  --bg-color-primary: #e5e5e5;
+  --bg-color-primary: #fff;
   --bg-color-secondary: #f5f4fa;
   --bg-color-button-hover: #188ce8;
 
@@ -69,19 +69,12 @@ img {
   text-decoration: none;
 }
 
-.section-header,
-.section-footer,
-.section-hero,
-.section {
+.container {
   width: 1200px;
   margin: 0px auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-
-/* .card * {
-  outline: 1px solid rgb(225, 0, 255);
-} */
 
 .card {
   display: flex;
@@ -98,39 +91,19 @@ img {
   background-color: var(--bg-color-card);
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-
-  /* outline: 1px solid red; */
-}
-
-.priorities-section {
-  padding-bottom: 0px;
-}
-
-.section-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.section-hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
-
 /*==================  header ================ */
 
 .page-header {
   background-color: var(--bg-color-header);
   border-bottom: 1px solid #ececec;
+
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   /* position: fixed;
   width: 100%; */
 }
-
-.section-header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+.container-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,7 +116,6 @@ img {
 /*  logo  */
 .logo {
   display: inline-block;
-  margin-right: 92px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -152,6 +124,7 @@ img {
 
 .page-header .logo {
   color: var(--logo-color-header);
+  margin-right: 92px;
 }
 .logo span {
   color: var(--accent-color);
@@ -159,7 +132,6 @@ img {
 
 .page-footer .logo {
   color: var(--primary-color-footer);
-
   margin-bottom: 20px;
 }
 
@@ -234,6 +206,9 @@ img {
 .hero {
   text-align: center;
   background-color: var(--bg-color-hero);
+
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -278,9 +253,11 @@ img {
 /* все секции */
 
 /*====================== priorities =================  */
-.section-priorities,
-.section-occupation {
-  background-color: var(--bg-color-primary);
+
+.section-priorities {
+  /* background-color: var(--bg-color-primary); */
+
+  padding-top: 94px;
 }
 
 .priorities {
@@ -323,7 +300,11 @@ img {
 
 /*=============== occupation ============== */
 
-.occupation {
+.section-occupation {
+  /* background-color: var(--bg-color-primary); */
+
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .occupation .item {
@@ -333,6 +314,9 @@ img {
 /*=============== TEAM ============== */
 .section-team {
   background-color: var(--bg-color-secondary);
+
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .team {
@@ -379,6 +363,9 @@ img {
 .page-footer {
   color: var(--primary-color-footer);
   background-color: var(--bg-color-footer);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .page-footer-address {
@@ -404,7 +391,10 @@ img {
 /* секция портфолио */
 
 .section-portfolio {
-  background-color: var(--bg-color-primary);
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  /* background-color: var(--bg-color-primary); */
 }
 
 .section-portfolio-works .title {
@@ -422,7 +412,6 @@ img {
 }
 
 .section-portfolio-works .card-text {
-  /* background-color: crimson; */
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
